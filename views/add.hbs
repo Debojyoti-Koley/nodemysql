@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addstudent"  >
+   <h3>ADD SITE DETAILS</h3>
+   
+    <hr>
+
+    <label for="phn"><b>SID</b></label>
+    <input type="phone" placeholder="Enter SID" name="SID" id="phone" required>
+
+    <label for="name"><b>Site Name</b></label>
+    <input type="text" placeholder="Enter Name" name="NAME" id="name" required>
+
+    
+
+    <label for="eml-id"><b>DATE</b></label>
+    <input type="phone" placeholder="Enter Date" name="DATE" id="email" required>
+
+    <label for="name"><b>Site Address</b></label>
+    <input type="text" placeholder="Enter Address" name="ADDRESS" id="name" required>
+   
+
+    <button type="submit" class="registerbtn">ADD SITE</button>
+
+    
+
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     <h3>Data Inserted</h3>
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>SITE already present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>

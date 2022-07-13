@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+      <form action="/searchstudent"  >
+   <h3>SEARCH SITE BY SID</h3>
+   
+    <hr>
+ 
+    <label for="phn"><b>SID</b></label>
+    <input type="phone" placeholder="type SID to be searched" name="SID" id="phone" required>
+
+    <button type="submit" class="registerbtn">SEACRH SITE</button>
+    <a href="./" style="color:black">BACK TO HOME PAGE</a>
+
+    <br>
+     {{!-- {{#if mesg1}}
+     <h3>Data Found!</h3>
+     <table>
+      <thead>
+        <tr>
+          <th>SID</th>
+          <th>NAME</th>
+          <th>DATE</th>
+          <th>ADDRESS</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#data}}
+      <tr>
+      <td>{{SID}}</td>
+      <td>{{SNAME}}</td>
+      <td>{{SDATE}}</td>
+      <td>{{SADDRESS}}</td>
+      </tr>
+      {{/data}}
+      </tbody>
+     </table>
+
+     <a href="./sitePage.hbs"><button>Go to site</button></a>
+     {{/if}} --}}
+
+     {{#if mesg2}}
+     <h3>Data Not Found!</h3>
+     {{/if}}
+    </form>
+
+    {{#if mesg1}}
+     <h3>Data Found!</h3>
+     <table>
+      <thead>
+        <tr>
+          <th>SID</th>
+          <th>NAME</th>
+          <th>DATE</th>
+          <th>ADDRESS</th>
+        </tr>
+      </thead>
+      <tbody>
+      {{#data}}
+      <tr>
+      <td>{{SID}}</td>
+      <td>{{NAME}}</td>
+      <td>{{DATE}}</td>
+      <td>{{ADDRESS}}</td>
+      </tr>
+      {{/data}}
+      </tbody>
+     </table>
+
+    {{#data}}
+     <a href="./sitePage/{{SID}}"><button> Go to site</button></a>
+     {{/data}}
+     {{/if}}
+  </div>
+</body>
+</html>

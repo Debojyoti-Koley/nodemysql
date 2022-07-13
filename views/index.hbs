@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>body{
+             display: flex;
+             flex-direction:column;
+             margin:2px;
+             }
+             .menu
+             {
+                display: flex;
+               justify-content: space-around;
+               background-color: blueviolet;
+             }
+             .menu a{
+                 font-size: 15px;
+                 font-weight: bolder;
+                 color:white;
+             }
+    </style>
+
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>Project ideas</h1>
+
+        <table>
+      <thead>
+        <tr>
+          <th>SID</th>
+          <th>NAME</th>
+          <th>DATE</th>
+          <th>ADDRESS</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      {{#data}}
+      <tr>
+      <td>{{SID}}</td>
+      <td>{{NAME}}</td>
+      <td>{{DATE}}</td>
+      <td>{{ADDRESS}}</td>
+      </tr>
+      {{/data}}
+      
+      
+      </tbody>
+     </table>
+
+
+        <div class="menu">
+            <a href="/add"> ADD SITE</a>
+            <a href="/search"> SEARCH SITE</a>
+            <a href="/update"> UPDATE STUDENT</a>
+            <a href="/delete"> DELETE SITE</a>
+            {{!-- <a href="/view"> VIEW SITES</a> --}}
+        </div>
+
+
+
+        {{!-- bootstarap table --}}
+
+        
+    </body>
+</html>

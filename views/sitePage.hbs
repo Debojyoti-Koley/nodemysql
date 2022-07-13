@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>body{
+             display: flex;
+             flex-direction:column;
+             margin:2px;
+             }
+             .menu
+             {
+                display: flex;
+               justify-content: space-around;
+               background-color: blueviolet;
+             }
+             .menu a{
+                 font-size: 15px;
+                 font-weight: bolder;
+                 color:white;
+             }
+    </style>
+
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <h1>INTO THE SITE</h1>
+        <br>
+        <h2>Estimates</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>SID</th>
+          <th>E_BRICKS</th>
+          <th>E_CEMENTS</th>
+          <th>E_STEELS</th>
+          <th>E_SAND</th>
+          <th>E_STONE</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      {{#data1}}
+      <tr>
+      <td>{{SID}}</td>
+      <td>{{E_BRICKS}}</td>
+      <td>{{E_CEMENTS}}</td>
+      <td>{{E_STEELS}}</td>
+      <td>{{E_SAND}}</td>
+      <td>{{E_STONE}}</td>
+      </tr>
+      {{/data1}}
+      
+      
+      </tbody>
+     </table>
+
+     <br>
+     <br>
+     <h2>Stocks</h2>
+        <table>
+      <thead>
+        <tr>
+          <th>SID</th>
+          <th>BRICKS</th>
+          <th>CEMENTS</th>
+          <th>STEELS</th>
+          <th>SAND</th>
+          <th>STONE</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+      {{#data2}}
+      <tr>
+      <td>{{SID}}</td>
+      <td>{{BRICKS}}</td>
+      <td>{{CEMENTS}}</td>
+      <td>{{STEELS}}</td>
+      <td>{{SAND}}</td>
+      <td>{{STONE}}</td>
+      </tr>
+      {{/data2}}
+      
+      
+      </tbody>
+     </table>
+
+    <br>
+        <div class="menu">
+            {{#data0}}
+            <a href="/estimations/{{SID}}"> ADD ESTIMATES</a>
+            
+            <a href="/stocks/{{SID}}"> ADD STOCKS</a>
+            {{/data0}}
+            
+        </div>
+
+<a href="/">home</a>
+
+        {{!-- bootstarap table --}}
+
+        {{!-- <a href="/update"> UPDATE STUDENT</a>
+            <a href="/delete"> DELETE SITE</a> --}}
+            {{!-- <a href="/view"> VIEW SITES</a> --}}
+    </body>
+</html>

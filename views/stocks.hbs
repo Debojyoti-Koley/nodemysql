@@ -1,0 +1,60 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="container">
+       <form action="/addStocks"  >
+   <h3>ADD STOCK DETAILS</h3>
+   
+    <hr>
+
+    {{#data}}
+    <label for="phn"><b>SID</b></label>
+    <input type="phone" placeholder="Enter SID" name="SID" id="phone" value="{{SID}}" readonly>
+    {{/data}}
+
+    <label for="name"><b>BRICKS</b></label>
+    <input type="phone" placeholder="Enter Name" name="BRICKS" id="name" required>
+
+    
+
+    <label for="eml-id"><b>CEMENTS</b></label>
+    <input type="phone" placeholder="Enter Date" name="CEMENTS" id="email" required>
+
+    <label for="name"><b>STEELS</b></label>
+    <input type="text" placeholder="Enter Address" name="STEELS" id="name" required>
+
+    <label for="name"><b>SAND</b></label>
+    <input type="text" placeholder="Enter Address" name="SAND" id="name" required>
+
+    <label for="name"><b>STONE</b></label>
+    <input type="text" placeholder="Enter Address" name="STONE" id="name" required>
+   
+
+    <button type="submit" class="registerbtn">ADD ESTIMATIONS</button>
+
+    
+
+    <a href="./" style="color:black">BACK TO HOME PAGE</a> <br>
+     
+     {{#if mesg}}
+     {{#mesg}}
+     <h3>Data Inserted</h3>
+     <a href="/sitePage/{{SID}}">BACK</a>
+     {{/mesg}}
+     {{/if}}
+
+      {{#if checkmesg}}
+     <h3>ESTIMATIONS already present!</h3>
+     {{/if}}
+</form>
+</div>
+</body>
+</html>
