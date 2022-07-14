@@ -13,7 +13,7 @@ body {
 }
 
 .container {
-    background-color: orangered;
+    background-color: #c6cfc3;
     width: 500px;
     position: absolute;
     left: 35%;
@@ -21,6 +21,15 @@ body {
     top: 10%;
     border-radius: 10px;
     ;
+}
+
+.d{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 30px;
+    background-color: #dbcfaf;
+    height: 40vh;
+    padding: 20px;
 }
 
 
@@ -48,13 +57,14 @@ input[type=email]:focus {
 /* Set a style for the submit button */
 
 .registerbtn {
-    background-color: #04AA6D;
+    background-color: #0a476c;
     color: white;
     margin: 8px 0;
-    padding: 6px 8px;
+    padding: 8px 10px;
     border: none;
     cursor: pointer;
     opacity: 0.9;
+    border-radius: 50px;
 }
 
 .registerbtn:hover {
